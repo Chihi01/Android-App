@@ -1,0 +1,144 @@
+<FloatLayout>:  
+    price: price
+    store: store
+    date: date
+    name: name_label
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'background.jpg'
+   
+    
+    RoundedButton:
+        id: camera
+        bold: True
+        text: 'Capture'
+        size_hint: 0.2,0.1
+        pos_hint: {"x":0.425, "y":0.35}
+        on_press: root.capture()
+
+    Label:
+        pos_hint: {"x":0, "y":0.85}
+        size_hint: 0.2,0.1
+        text:"*Price Bought: "
+
+    TextInput:
+        id: price
+        pos_hint: {"x":0.2, "y":0.875}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    Label:
+        pos_hint: {"x":0, "y":0.75}
+        size_hint: 0.2,0.1
+        text:"*Store Bought: "
+
+    TextInput:
+        id: store
+        pos_hint: {"x":0.2, "y":0.775}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    Label:
+        pos_hint: {"x":0, "y":0.65}
+        size_hint: 0.2,0.1
+        text:"*Date Bought: "
+
+    TextInput:
+        id: date
+        pos_hint: {"x":0.2, "y":0.675}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    #------------------------------------
+
+    Label:
+        pos_hint: {"x":0.4, "y":0.85}
+        size_hint: 0.2,0.1
+        text:"*Price Sold: "
+
+    TextInput:
+        id: price2
+        pos_hint: {"x":0.6, "y":0.875}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    Label:
+        pos_hint: {"x":0.4, "y":0.75}
+        size_hint: 0.2,0.1
+        text:"*Store Sold: "
+
+    TextInput:
+        id: store2
+        pos_hint: {"x":0.6, "y":0.775}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    Label:
+        pos_hint: {"x":0.4, "y":0.65}
+        size_hint: 0.2,0.1
+        text:"*Date Sold: "
+
+    TextInput:
+        id: date2
+        pos_hint: {"x":0.6, "y":0.675}
+        size_hint: 0.2,0.05
+        padding_y: (self.height - self.line_height) / 2
+        multiline: False
+
+    RoundedButton:
+        pos_hint: {"x":0.2, "y":0.35}
+        size_hint: 0.2,0.1
+        bold: True
+        text: "Scan Barcode!"
+
+    Label:
+        id: name_label
+        bold: True
+        text: "Scan Barcode for Name / Size"
+        pos_hint: {"x":0.4, "y":0.2}
+        size_hint: 0.2,0.1    
+
+    RoundedButton:
+        pos_hint: {"x":0.2, "y":0.05}
+        size_hint: 0.2,0.1
+        bold: True
+        text: "Press Here!"
+        on_press: root.open()
+
+    RoundedButton:
+        pos_hint: {"x":0.425, "y":0.05}
+        size_hint: 0.2,0.1
+        bold: True
+        text: "Press Here to Clear!"
+        on_press: root.clear()
+    
+    RoundedButton:
+        pos_hint: {"x":0.65, "y":0.05}
+        size_hint: 0.2,0.1
+        bold: True
+        text: "Add to Books!"
+        on_press: root.insert()
+
+<RoundedButton@Button>
+	background_color: (0,0,0,0)
+	background_normal: ''
+	canvas.before:
+		Color:
+			rgba: (48/255,84/255,150/255,1)
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [25]
+
+    
+
+
+    
+    
